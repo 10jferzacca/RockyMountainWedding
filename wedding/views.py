@@ -31,3 +31,7 @@ def venue_edit(request, pk):
     else:
         form = VenueForm(instance=venue)
     return render(request, 'wedding/venue_form.html', {'form': form})
+
+def venue_delete(request, pk):
+    Venue.objects.get(id=pk).delete()
+    return redirect('venue_list')
