@@ -1,4 +1,5 @@
-<h2>{{ venue.name }} <a href="">(edit)</a></h2>
+<h2>{{ venue.name }} <a href="{% url 'venue_edit' pk=venue.pk %}">(edit)</a></h2>
 <h4>{{ venue.location }}</h4>
 
 <img src="{{ venue.photo_url }}" alt="" class="venue-photo" />
+

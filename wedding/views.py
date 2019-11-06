@@ -20,3 +20,14 @@ def venue_create(request):
     else:
         form = VenueForm()
     return render(request, 'wedding/venue_form.html', {'form': form})
+
+def venue_edit(request, pk):
+    venue = Venue.objects.get(pk=pk)
+    if request.method == "POST":
+        form = VenueForm(request.POST, instance=venue)
+        if form.is_valid():
+            venue = form.save()
+            return redirect('venue_detail', pk=venue.pk)
+    else:
+        form = VenueForm(instance=venue)
+    return render(request, 'wedding/venue_form.html', {'form': form})
