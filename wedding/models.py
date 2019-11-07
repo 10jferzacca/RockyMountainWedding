@@ -9,3 +9,11 @@ class Venue(models.Model):
     def __str__(self):
         return self.name
 
+class Photographer(models.Model):
+    name = models.CharField(max_length=100)
+    business = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    photo_url = models.TextField()
+
+    def __str__(self):
+        return self.name

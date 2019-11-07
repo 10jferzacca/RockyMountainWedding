@@ -1,0 +1,13 @@
+{% extends 'wedding/base.html' %}
+{% block content %}
+
+<h2>Photographers</h2>
+<ul>
+  {% for photographer in photographers %}
+  <li>
+    <a href="{% url 'photographer_detail' pk=photographer.pk %}">{{ photographer.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

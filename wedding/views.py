@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import Venue
+from .models import Venue, Photographer
 from .forms import VenueForm
 
-# Create your views here.
+# Venue Model Views
+
 def venue_list(request):
     venues = Venue.objects.all()
     return render(request, 'wedding/venue_list.html', {'venues': venues})
@@ -35,3 +36,14 @@ def venue_edit(request, pk):
 def venue_delete(request, pk):
     Venue.objects.get(id=pk).delete()
     return redirect('venue_list')
+
+
+#Photographer Model Views
+
+def photographer_list(request):
+    photographers = Photographer.objects.all()
+    return render(request, 'wedding/photographer_list.html', {'photographers': photographers})
+
+def photographer_detail(request, pk):
+    photographer = Photographer.objects.get(id=pk)
+    return render(request, 'wedding/photographer_detail.html', {'photographer': photographer})

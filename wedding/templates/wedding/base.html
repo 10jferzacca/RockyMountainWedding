@@ -1,15 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RockyMountainWedding</title>
+    <link rel="stylesheet" href="{% static 'css/wedding.css' %}" />
 </head>
 <body>
+    <header>
     <h1>Rocky Mountain Weddings</h1>
-    <nav>
-      <a href="{% url 'venue_list' %}">Venues</a>
+</header>
+    <nav class="navbar">
+      <a class="navbar" href="{% url 'venue_list' %}">VENUES</a>
+      <a class="navbar" href="{% url 'photographer_list' %}">PHOTOGRAPHERS</a>
     </nav>
     {% block content %} {% endblock %}
 </body>
