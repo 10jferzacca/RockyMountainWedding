@@ -6,7 +6,6 @@
 <h4>{{ venue.location }}</h4>
 
 <img src="{{ venue.photo_url }}" alt="" class="venue-photo" />
-<a href="{% url 'venue_edit' pk=venue.pk %}">edit</a>
-<a href="{% url 'venue_delete' pk=venue.pk %}">delete</a>
+
 
 {% endblock %}

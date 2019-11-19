@@ -1,0 +1,13 @@
+{% extends 'wedding/base.html' %}
+{% block content %}
+
+<h2>Music</h2>
+<ul>
+  {% for music in musics %}
+  <li>
+    <a href="{% url 'music_detail' pk=music.pk %}">{{ music.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -14,8 +14,14 @@
     <h1>Rocky Mountain Weddings</h1>
 </header>
     <nav class="navbar">
+      <a class="navbar" href="{% url 'post_list' %}">HOME</a>
       <a class="navbar" href="{% url 'venue_list' %}">VENUES</a>
       <a class="navbar" href="{% url 'photographer_list' %}">PHOTOGRAPHERS</a>
+      <a class="navbar" href="{% url 'florist_list' %}">FLORIST</a>
+      <a class="navbar" href="{% url 'planner_list' %}">PLANNERS</a>
+      <a class="navbar" href="{% url 'music_list' %}">MUSIC</a>
+      <a class="navbar" href="{% url 'catering_list' %}">CATERERS</a>
+      <a class="navbar" href="{% url 'bakery_list' %}">BAKERIES</a>
     </nav>
     {% block content %} {% endblock %}
 </body>

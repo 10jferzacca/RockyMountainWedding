@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Venue, Photographer
+from .models import Post, Venue, Photographer, Florist, Planner, Music, Catering, Bakery
 # Register your models here.
 
 
-admin.site.register([Venue, Photographer])
+admin.site.register([Post, Venue, Photographer, Florist, Planner, Music, Catering, Bakery])

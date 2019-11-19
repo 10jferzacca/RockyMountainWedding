@@ -1,12 +1,11 @@
 {% extends 'wedding/base.html' %}
 {% block content %}
 
-<h2>Venues <a href="{% url 'venue_create' %}">(+)</a></h2>
+<h2>Venues</h2>
 <ul>
   {% for venue in venues %}
   <li>
-    <a href="{% url 'venue_detail' pk=venue.pk %}">
-    {{ venue.name }}</a>
+    <a href="{% url 'venue_detail' pk=venue.pk %}">{{ venue.name }}</a>
   </li>
   {% endfor %}
 </ul>

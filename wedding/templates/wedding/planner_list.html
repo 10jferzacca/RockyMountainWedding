@@ -1,0 +1,13 @@
+{% extends 'wedding/base.html' %}
+{% block content %}
+
+<h2>Planners</h2>
+<ul>
+  {% for planner in planners %}
+  <li>
+    <a href="{% url 'planner_detail' pk=planner.pk %}">{{ planner.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

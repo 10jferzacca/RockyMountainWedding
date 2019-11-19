@@ -1,0 +1,13 @@
+{% extends 'wedding/base.html' %}
+{% block content %}
+
+<h2>Caters</h2>
+<ul>
+  {% for catering in caterings %}
+  <li>
+    <a href="{% url 'catering_detail' pk=catering.pk %}">{{ catering.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

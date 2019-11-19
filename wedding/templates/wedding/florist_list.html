@@ -1,0 +1,13 @@
+{% extends 'wedding/base.html' %}
+{% block content %}
+
+<h2>Florists</h2>
+<ul>
+  {% for florist in florists %}
+  <li>
+    <a href="{% url 'florist_detail' pk=florist.pk %}">{{ florist.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
