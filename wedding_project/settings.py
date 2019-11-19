@@ -130,4 +130,4 @@ STATIC_DIR = [
     os.path.join(BASE_DIR, 'boot'),
 ]
 
-django_heroku.settings(local())
+django_heroku.settings(locals())
