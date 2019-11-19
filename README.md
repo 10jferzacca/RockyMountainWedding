@@ -4,6 +4,8 @@ Rocky Mountain Wedding is a place where people can find resources to all of the 
 
 ## Technologies Used
 
+- Boostrap
+- CSS
 - Django
     - Utilized Django to handle requests from users, sava data rockymountainweddings database, and process the data
 
